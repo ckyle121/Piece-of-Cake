@@ -22,4 +22,22 @@ public class Main {
         }
 
     }
+
+    //Subclass of Cupcake, Red Velvet Class
+    class RedVelvet extends Cupcake {
+
+        @Override
+        public void type(){
+            System.out.println("A red velvet based cupcake, with cream cheese frosting");
+        }
+    }
+
+    // Subclass of Cupcake, Chocolate Class
+    class Chocolate extends Cupcake {
+
+        @Override
+        public void type(){
+            System.out.println("A chocolate based cupcake, with chocolate frosting.");
+        }
+
 }
