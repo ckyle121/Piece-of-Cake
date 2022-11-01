@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
+        // cupcake menu array
         ArrayList<Cupcake> cupcakeMenu = new ArrayList<>();
 
         Cupcake cupcake = new Cupcake();
@@ -54,6 +55,13 @@ public class Main {
         cupcakeMenu.add(cupcake);
         cupcakeMenu.add(redVelvet);
         cupcakeMenu.add(chocolate);
+
+        // drink menu array
+        ArrayList<Drink> drinkMenu = new ArrayList<>();
+
+        Drink water = new Drink();
+        Soda soda = new Soda();
+        Milk milk = new Milk();
     }
 }
 // Parent Cupcake Class
