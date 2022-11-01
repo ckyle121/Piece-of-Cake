@@ -99,7 +99,9 @@ public class Main {
         drinkMenu.add(water);
         drinkMenu.add(soda);
         drinkMenu.add(milk);
-;
+
+        // call the Order constructor passing cupcakeMenu & drinkMenu as parameters
+        new Order(cupcakeMenu, drinkMenu);
     }
 }
 // Parent Cupcake Class
