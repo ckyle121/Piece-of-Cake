@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,6 +16,22 @@ public class Order {
         ArrayList<Object> order = new ArrayList<>();
 
         if (placeOrder.equalsIgnoreCase("y")){
+            // add date and time to order array
+            order.add(LocalDate.now());
+            order.add(LocalTime.now());
+
+            System.out.println("Here is our menu" + "\nCupcakes: ");
+
+            int itemNumber = 0;
+
+            for (int i = 0; i < cupcakeMenu.size(); i++){
+                itemNumber++;
+                System.out.print(itemNumber);
+                cupcakeMenu.get(i).type();
+                System.out.println("Price: $" + cupcakeMenu.get(i).getPrice());
+                System.out.println();
+            }
+
 
         } else {
             System.out.println("Okay, have a wonderful day!");
