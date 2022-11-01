@@ -20,6 +20,7 @@ public class Order {
             order.add(LocalDate.now());
             order.add(LocalTime.now());
 
+            // loop through cupcake menu
             System.out.println("Here is our menu" + "\nCupcakes: ");
 
             int itemNumber = 0;
@@ -32,10 +33,19 @@ public class Order {
                 System.out.println();
             }
 
+            // loop through the drinks menu
+            System.out.println("Drinks: ");
+
+            for (int i = 0; i  < drinkMenu.size(); i++){
+                itemNumber++;
+                System.out.print(itemNumber);
+                drinkMenu.get(i).type();
+                System.out.println("Price: $" + drinkMenu.get(i).getPrice());
+                System.out.println();
+            }
 
         } else {
             System.out.println("Okay, have a wonderful day!");
         }
-
    }
 }
