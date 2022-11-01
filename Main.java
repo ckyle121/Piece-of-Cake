@@ -114,3 +114,12 @@ class Drink {
         System.out.println("A bottle of water");
     }
 }
+
+// Subclass of Drink, Soda Class
+class Soda extends Drink {
+
+    @Override
+    public void type(){
+        System.out.println("A bottle of soda");
+    }
+}
