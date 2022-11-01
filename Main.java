@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
@@ -15,7 +16,7 @@ public class Main {
         // Scanner takes input from user
         Scanner input = new Scanner(System.in);
 
-        // Vanilla cupcake
+        // Vanilla cupcake pricing
         System.out.println("We are deciding on the price for our standard cupcake. Here is the description: " );
         cupcake.type();
 
@@ -27,7 +28,7 @@ public class Main {
 
         cupcake.setPrice(price);
 
-        // Red Velvet cupcake
+        // Red Velvet cupcake pricing
         System.out.println("Now we need to decide a price for the red velvet cupcake. Here is the description: ");
         redVelvet.type();
 
@@ -39,7 +40,7 @@ public class Main {
 
         redVelvet.setPrice(price);
 
-        // Chocolate Cupcake
+        // Chocolate Cupcake pricing
         System.out.println("Now we need to decide a price for the chocolate cupcake. Here is the description: ");
         chocolate.type();
 
@@ -62,6 +63,43 @@ public class Main {
         Drink water = new Drink();
         Soda soda = new Soda();
         Milk milk = new Milk();
+
+        // interact with user to get information about the drink menu options
+        // water pricing
+        System.out.println("We need to decide the pricing for the drinks on the menu" + "\nWhat should we charge for: ");
+        water.type();
+
+        priceText = input.nextLine();
+        // convert string to double
+        price = Double.parseDouble(priceText);
+
+        water.setPrice(price);
+
+        // soda pricing
+        System.out.println("What do you think we should charge for: ");
+        soda.type();
+
+        priceText = input.nextLine();
+        // convert string to double
+        price = Double.parseDouble(priceText);
+
+        soda.setPrice(price);
+
+        // milk pricing
+        System.out.println("What do you think we should charge for: ");
+        milk.type();
+
+        priceText = input.nextLine();
+        //convert stirg to double
+        price = Double.parseDouble(priceText);
+
+        milk.setPrice(price);
+
+        // add drinks to drink menu array
+        drinkMenu.add(water);
+        drinkMenu.add(soda);
+        drinkMenu.add(milk);
+;
     }
 }
 // Parent Cupcake Class
@@ -82,7 +120,6 @@ class Cupcake {
     public void type(){
         System.out.println("A basic, generic cupcake, with vanilla frosting.");
     }
-
 }
 
 //Subclass of Cupcake, Red Velvet Class
