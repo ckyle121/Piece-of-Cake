@@ -44,6 +44,40 @@ public class Order {
                 System.out.println();
             }
 
+            // take customer's order
+            boolean ordering = true;
+
+            while (ordering = true){
+                System.out.println("What would you like to order?" + "\nPlease use the number associated with each item to order.");
+                int orderChoice = input.nextInt();
+                // call input.nextLine to fix scanner after calling nextInt
+                input.nextLine();
+
+                if (orderChoice == 1){
+
+                } else if (orderChoice == 2){
+
+                } else if (orderChoice == 3) {
+
+                } else if (orderChoice == 4) {
+
+                } else if (orderChoice == 5){
+
+                } else if (orderChoice == 6) {
+
+                } else {
+                    System.out.println("Sorry, we don't see to have that item on the menu.");
+                }
+
+                System.out.println("Would you like to continue ordering? (Y/N)");
+
+                String continueOrder = input.nextLine();
+
+                if (!continueOrder.equalsIgnoreCase("Y")){
+                    ordering = false;
+                }
+            }
+
         } else {
             System.out.println("Okay, have a wonderful day!");
         }
