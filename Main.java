@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Cupcake> cupcakeMenu = new ArrayList<Cupcake>();
+        ArrayList<Cupcake> cupcakeMenu = new ArrayList<>();
 
         Cupcake cupcake = new Cupcake();
         RedVelvet redVelvet = new RedVelvet();
@@ -92,5 +92,25 @@ class Chocolate extends Cupcake {
     @Override
     public void type(){
         System.out.println("A chocolate based cupcake, with chocolate frosting.");
+    }
+}
+
+// Parent Class Drink
+class Drink {
+    public double price;
+
+    // Getter
+    public double getPrice() {
+        return price;
+    }
+
+    // Setter
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    // Methods
+    public void type(){
+        System.out.println("A bottle of water");
     }
 }
