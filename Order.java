@@ -84,6 +84,49 @@ public class Order {
                 }
             }
 
+            // generate a receipt for the order from customer
+
+            // get first two items in order array (date & time)
+            System.out.println(order.get(0)); // the date
+            System.out.println(order.get(1)); // the time
+
+            double subtotal = 0.00;
+            
+            
+            //loop through order, checking for menu item, and adding that price of the menu item to the subtoatl 
+            
+            for (int i = 2; i < order.size(); i++){
+                if (order.get(i).equals(cupcakeMenu.get(0))){
+                    cupcakeMenu.get(0).type();
+                    System.out.println(cupcakeMenu.get(0).getPrice());
+                    subtotal += cupcakeMenu.get(0).getPrice();
+                } else if (order.get(i).equals(cupcakeMenu.get(1))) {
+                    cupcakeMenu.get(1).type();
+                    System.out.println(cupcakeMenu.get(1).getPrice());
+                    subtotal += cupcakeMenu.get(1).getPrice();
+                } else if (order.get(i).equals(cupcakeMenu.get(2))) {
+                    cupcakeMenu.get(2).type();
+                    System.out.println(cupcakeMenu.get(2).getPrice());
+                    subtotal += cupcakeMenu.get(2).getPrice();
+                } else if (order.get(i).equals(drinkMenu.get(0))) {
+                    drinkMenu.get(0).type();
+                    System.out.println(drinkMenu.get(0).getPrice());
+                    subtotal += drinkMenu.get(0).getPrice();
+                } else if (order.get(i).equals(drinkMenu.get(1))) {
+                    drinkMenu.get(1).type();
+                    System.out.println(drinkMenu.get(1).getPrice());
+                    subtotal += drinkMenu.get(1).getPrice();
+                } else if (order.get(i).equals(drinkMenu.get(2))) {
+                    drinkMenu.get(2).type();
+                    System.out.println(drinkMenu.get(2).getPrice());
+                    subtotal += drinkMenu.get(2).getPrice();
+                }
+
+                // print subtotal
+                System.out.println("$" + subtotal + "\n");
+            }
+
+
         } else {
             System.out.println("Okay, have a wonderful day!");
         }
