@@ -167,7 +167,7 @@ class Soda extends Drink {
 
     @Override
     public void type(){
-        System.out.println("A bottle of soda");
+        System.out.println("A can of soda");
     }
 }
 
@@ -176,6 +176,6 @@ class Milk extends Drink {
 
     @Override
     public void type(){
-        System.out.println("A bottle of milk");
+        System.out.println("A carton of milk");
     }
 }
