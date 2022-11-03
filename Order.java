@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -126,9 +128,26 @@ public class Order {
                 System.out.println("$" + subtotal + "\n");
             }
 
-
         } else {
             System.out.println("Okay, have a wonderful day!");
         }
    }
+}
+
+class CreateFile {
+    public CreateFile(){
+        try {
+           File salesData = new File("salesData.txt");
+
+           if (salesData.createNewFile()){
+               System.out.println("File created: " + salesData.getName());
+           } else {
+               System.out.println("File already exists");
+           }
+
+        } catch (IOException e) {
+            System.out.println("An error occured");
+        }
+    }
+
 }
