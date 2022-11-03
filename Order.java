@@ -1,5 +1,4 @@
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -144,10 +143,30 @@ class CreateFile {
            } else {
                System.out.println("File already exists");
            }
-
         } catch (IOException e) {
             System.out.println("An error occured");
         }
     }
+}
 
+class WriteToFile {
+    public WriteToFile(ArrayList<Object> order){
+        try {
+            FileWriter fw = new FileWriter("salesData.txt", true);
+            PrintWriter salesWriter = new PrintWriter(fw);
+
+            // write each element in order to file
+            for (int i = 0; i < order.size(); i++){
+                salesWriter.println(order.get(i));
+            }
+
+            // stop the writer from continuing to wrun
+            salesWriter.close();
+
+            System.out.println("Successfully wrote to file");
+
+        } catch (IOException e){
+            System.out.println("An error occured");
+        }
+    }
 }
