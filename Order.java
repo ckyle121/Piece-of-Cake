@@ -125,6 +125,10 @@ public class Order {
 
                 // print subtotal
                 System.out.println("$" + subtotal + "\n");
+
+                // create new file and write the order to that file
+                new CreateFile();
+                new WriteToFile(order);
             }
 
         } else {
